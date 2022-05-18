@@ -1,0 +1,303 @@
+/*--- 
+
+Created by: Joseph Lee
+My css template for bootstrap projects and personal site
+
+---*/
+
+/*--- Universal Styles ---*/
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+
+:root {
+    --primary-colour: #194019;
+    --primary-light-colour: #143314;
+    --secondary-colour: #035d67;
+    --secondary-colour-dark: #035d67;
+    --disabled-colour: dimgrey;
+    --text-colour: white;
+}
+
+* {
+    font-family: 'DotGothic16', sans-serif;
+}
+
+body {
+    background-color: var(--primary-colour);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+article,
+label {
+    color: var(--text-colour);
+}
+
+.alert p {
+    color: inherit;
+    margin-bottom: 0;
+}
+
+nav {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    background-color: #008d00;
+}
+
+hr {
+    border-top: 1px solid rgba(0,0,0,.2) !important;
+}
+
+footer {
+    color: var(--text-colour);
+    display: flex;
+    justify-content: center;
+}
+
+footer p {
+    background-color: var(--primary-light-colour);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: underline;
+    color: var(--text-colour);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: dotted;
+    color: var(--secondary-colour-dark);
+}
+
+.white {
+    color: white;
+}
+
+.card {
+    background-color: var(--primary-light-colour);
+    border-radius: 0px;
+}
+
+.list-group {
+    border-radius: 0px;
+}
+
+.list-group .list-group-item {
+    background-color: var(--primary-light-colour);
+    color: var(--text-colour);
+    border: 3px solid rgba(0,0,0,.125);
+}
+
+.list-group .list-group-item.active {
+    color: var(--primary-colour);
+    border-color: var(--secondary-colour-dark);
+    border-width: 3px;
+    font-weight: 700;
+}
+
+.card.white, .list-group .list-group-item.active {
+    background-color: white;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.card.white p,
+.card.white h1,
+.card.white h5,
+.card.white h6,
+.card.white small,
+.card.white .card-header {
+    color: var(--primary-colour);
+}
+
+.card-expendable-icon {
+    color: white;
+    background-color: var(--primary-colour);
+    border-radius: 8px;
+}
+
+.card-expendable {
+    cursor: pointer;
+}
+
+.card-title,
+.display-5,
+.counter-num {
+    font-weight: 700;
+}
+
+.option-btn {
+    padding: 0.25rem 0.5rem !important;
+}
+
+/*--- Custom element Styles ---*/
+
+.alert {
+    border-radius: 8px;
+}
+
+.custom-btn {
+    border-radius: 4px;
+    background-color: var(--secondary-colour);
+    color: black;
+    padding: 0.75rem;
+    border: none;
+    transition-duration: 0.25s;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    line-height: normal;
+    text-align: center;
+}
+
+.custom-btn.disabled {
+    background-color: var(--disabled-colour);
+    color: white;
+    box-shadow: none;
+}
+
+.custom-btn.disabled:hover,
+.custom-btn.disabled:active {
+    background-color: var(--disabled-colour);
+    color: white;
+    box-shadow: none;
+    cursor: not-allowed;
+}
+
+.custom-btn:hover {
+    text-decoration: none;
+    color: black;
+    background-color: var(--secondary-colour-dark);
+    box-shadow: none;
+}
+
+.custom-btn:active {
+    box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.nav-btn {
+    padding: 0.375rem 0.75rem !important;
+    display: inline-flex;
+}
+
+.danger,
+.danger:hover,
+.logout,
+.logout:hover {
+    background-color: red;
+    color: white;
+}
+
+.custom-input {
+    border-radius: 4px;
+    background-color: white;
+    color: black;
+    padding: 0.75rem;
+    border: none;
+    transition-duration: 0.25s;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    line-height: normal;
+    height: 43px;
+}
+
+.custom-input:hover {
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.custom-input:focus {
+    text-decoration: none;
+    box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.card-columns .card {
+    margin-bottom: 1rem !important;
+}
+
+.modal-title {
+    color: black;
+}
+
+.inherit-radius {
+    border-radius: inherit;
+}
+
+.no-radius {
+    border-radius: 0;
+}
+
+.no-border {
+    border-width: 0;
+}
+
+/*--- Website Specific Styles ---*/
+
+.card-img-top {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.intro-icon {
+    font-size: 128px;
+    color: white;
+}
+
+.category-icon {
+    font-size: 48px;
+    color: white;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+}
+
+.subcategory-line-color {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subcategory-header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.subcategory-icon {
+    font-size: 32px;
+    color: white;
+}
+
+.h-shadow {
+    transition-duration: 0.25s;
+}
+
+.h-shadow:hover {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    scale: 1.05;
+    z-index: 1;
+}
+
+.divider {
+    height: 2px; 
+    background-color: white;
+}
+
+@media only screen and (max-width: 992px) {
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+  }
