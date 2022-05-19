@@ -64,13 +64,60 @@
             </div>
         </div>
 
-        <div>
-            <div class="card subcategory-header mb-3" id="line-1-header">
-                <div style="background-color: #035d67;" class="subcategory-line-color mr-3">
-                    <span class="material-symbols-sharp subcategory-icon">square_foot</span>
+        <div class="row mb-3">
+            <div class="col-lg-6">
+                <div class="card subcategory-header mb-3" id="line-1-header">
+                    <div style="background-color: #035d67;" class="subcategory-line-color mr-3">
+                        <span class="material-symbols-sharp subcategory-icon">square_foot</span>
+                    </div>
+                    <h2>Specifications</h2>
                 </div>
-                <h2>Specifications</h2>
+                <div>
+                    <table class="table">
+                        <tr>
+                            <th>Spec</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>Constructed</td>
+                            <td id="train-built"></td>
+                        </tr>
+                        <tr>
+                            <td>No. of Cars</td>
+                            <td id="train-cars"></td>
+                        </tr>
+                        <tr>
+                            <td>Capacity</td>
+                            <td id="train-capacity"></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
+            <div class="col-lg-6">
+                <div class="card subcategory-header mb-3" id="line-1-header">
+                    <div style="background-color: #035d67;" class="subcategory-line-color mr-3">
+                        <span class="material-symbols-sharp subcategory-icon">route</span>
+                    </div>
+                    <h2>Lines</h2>
+                </div>
+                <div id="train-lines" class="row">
+                    <!-- Template for javascript, refer to train.js for code -->
+                    <!-- <div class="col-md-6">
+                        <a href="#">
+                            <div class="card h-shadow">
+                                <div class="line-card-color" style="background-color: #9acd32;"></div>
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center">
+                                        <h5 class="flex-fill m-0">Testing Line</h5>
+                                        <span class="material-symbols-sharp white">chevron_right</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+            </div>
+            
         </div>
     </div>
 </body>

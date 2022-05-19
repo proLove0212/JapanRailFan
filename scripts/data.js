@@ -16,7 +16,7 @@ const lines = {
     2: {
         name: "Chuo-Sobu Line",
         japaneseName: "中央・総武緩行線",
-        description: "The Chūō-Sōbu Line (Japanese: 中央・総武緩行線, Hepburn: Chūō-Sōbu-kankō-sen) is a railway line that runs through Tokyo and Chiba Prefecture, Japan. Part of the East Japan Railway Company (JR East) network, the line operates on separate tracks along the right-of-way of the Chūō Main Line (Chūō Line (Rapid)) and Sōbu Main Line (Sōbu Line (Rapid)), providing service between Mitaka Station in the cities of Mitaka and Musashino and Chiba Station in Chiba.",
+        description: "The Chuo-Sobu Line (Japanese: 中央・総武緩行線, Hepburn: Chuo-Sobu-kanko-sen) is a railway line that runs through Tokyo and Chiba Prefecture, Japan. Part of the East Japan Railway Company (JR East) network, the line operates on separate tracks along the right-of-way of the Chūō Main Line (Chūō Line (Rapid)) and Sōbu Main Line (Sōbu Line (Rapid)), providing service between Mitaka Station in the cities of Mitaka and Musashino and Chiba Station in Chiba.",
         color: "FFD400",
         images: [
             "./imgs/e235-1.jpg",
@@ -52,7 +52,7 @@ const trains = {
     },
     2: {
         name: "E231-500 Series",
-        description: "The E231-500 Series is a high-capacity train that operates on the Chou-Sobu Line and former the Yamanote Line. The train consists of 10 cars (Chūō-Sōbu Line) or 11 cars (Yamanote Line). Cars no. 7 and 10 are configured with 6 doors on each side for quicker boarding and alighting. (Only for Yamanote Line)",
+        description: "The E231-500 Series is a high-capacity train that operates on the Chou-Sobu Line and formerly the Yamanote Line. The train consists of 10 cars (Chuo-Sobu Line) or 11 cars (Yamanote Line). Cars no. 7 and 10 are configured with 6 doors on each side for quicker boarding and alighting. (Only for Yamanote Line)",
         built: "2002 - 2005",
         images: [
             "./imgs/e231-1.jpg",
