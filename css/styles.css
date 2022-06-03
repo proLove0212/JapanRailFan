@@ -300,6 +300,16 @@ table td, table th {
     transition-duration: 0.25s;
 }
 
+.gallery-img {
+    border: 1px solid rgba(0,0,0,.125);
+    cursor: pointer;
+}
+
+.gallery-img.active {
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    transform: scale(1.25);
+}
+
 .h-shadow:hover {
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);

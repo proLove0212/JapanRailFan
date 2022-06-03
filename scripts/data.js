@@ -56,6 +56,7 @@ const trains = {
         built: "2002 - 2005",
         images: [
             "./imgs/e231-1.jpg",
+            "./imgs/e231-2.jpg"
         ],
         line: ["1", "2"],
         cars: 11,
