@@ -1,3 +1,5 @@
+// Script for database
+
 const lines = {
     1: {
         name: "Yamanote Line",
@@ -56,7 +58,9 @@ const trains = {
         built: "2002 - 2005",
         images: [
             "./imgs/e231-1.jpg",
-            "./imgs/e231-2.jpg"
+            "./imgs/e231-2.jpg",
+            "./imgs/e231-3.jpg",
+            "./imgs/e231-4.jpg",
         ],
         line: ["1", "2"],
         cars: 11,

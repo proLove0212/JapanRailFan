@@ -1,3 +1,5 @@
+// Script for trains.html
+
 var content = document.getElementById("main")
 var othersHtml = ""
 

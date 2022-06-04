@@ -1,3 +1,5 @@
+// Script for train.html
+
 var id = urlParams.get("train")
 var linesHtml = ""
 var carouselGalleryHtml = ""
