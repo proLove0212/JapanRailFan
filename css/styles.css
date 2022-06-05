@@ -314,10 +314,29 @@ table td, table th {
     transform: scale(1.25) !important;
 }
 
+.carousel-gallery-img {
+    height: 350px;
+    object-fit: cover;
+}
+
 .h-shadow:hover {
     box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
     z-index: 1;
+}
+
+.line-icon {
+    border: 5px solid #035d67;
+    border-radius: 16px;
+    background-color: white;
+    width: 96px;
+    height: 96px;
+}
+
+.line-icon span {
+    font-size: 48px;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .divider {

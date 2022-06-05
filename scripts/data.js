@@ -4,7 +4,8 @@ const lines = {
     1: {
         name: "Yamanote Line",
         japaneseName: "山手線",
-        description: "The Yamanote Line (Japanese: 山手線, Yamanote-sen) is the loop service in Tokyo, Japan, operated by East Japan Railway Company (JR East). It is one of Tokyo's busiest and most important lines, connecting most of Tokyo's major stations and urban centres, including Marunouchi, the Yūrakuchō/Ginza area, Shinagawa, Shibuya, Shinjuku, Ikebukuro, and Ueno, with all but two of its 30 stations connecting to other railway or underground (subway) lines. ",
+        shortName: "JY",
+        description: "The Yamanote Line (Japanese: 山手線, Yamanote-sen) is the loop service in Tokyo, Japan, operated by East Japan Railway Company (JR East). It is one of Tokyo's busiest and most important lines, connecting most of Tokyo's major stations and urban centres, including Marunouchi, the Yurakucho/Ginza area, Shinagawa, Shibuya, Shinjuku, Ikebukuro, and Ueno, with all but two of its 30 stations connecting to other railway or underground (subway) lines. ",
         color: "9acd32",
         images: [
             "./imgs/e235-1.jpg",
@@ -18,7 +19,8 @@ const lines = {
     2: {
         name: "Chuo-Sobu Line",
         japaneseName: "中央・総武緩行線",
-        description: "The Chuo-Sobu Line (Japanese: 中央・総武緩行線, Hepburn: Chuo-Sobu-kanko-sen) is a railway line that runs through Tokyo and Chiba Prefecture, Japan. Part of the East Japan Railway Company (JR East) network, the line operates on separate tracks along the right-of-way of the Chūō Main Line (Chūō Line (Rapid)) and Sōbu Main Line (Sōbu Line (Rapid)), providing service between Mitaka Station in the cities of Mitaka and Musashino and Chiba Station in Chiba.",
+        shortName: "JB",
+        description: "The Chuo-Sobu Line (Japanese: 中央・総武緩行線, Hepburn: Chuo-Sobu-kanko-sen) is a railway line that runs through Tokyo and Chiba Prefecture, Japan. Part of the East Japan Railway Company (JR East) network, the line operates on separate tracks along the right-of-way of the Chuo Main Line (Chuo Line (Rapid)) and Sobu Main Line (Sobu Line (Rapid)), providing service between Mitaka Station in the cities of Mitaka and Musashino and Chiba Station in Chiba.",
         color: "FFD400",
         images: [
             "./imgs/e235-1.jpg",
@@ -47,6 +49,7 @@ const trains = {
         built: "2015 - 2019",
         images: [
             "./imgs/e235-1.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Yamanote_Line_E235_Ikebukuro_20150326.JPG/1280px-Yamanote_Line_E235_Ikebukuro_20150326.JPG",
         ],
         line: ["1"],
         cars: 11,

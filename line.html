@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/x-icon" href="./imgs/favicon.ico">
+    <script src="./scripts/jquery.slim.min.js"></script>
+    <script src="./scripts/popper.min.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/common.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line - JapanRailFan</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">JapanRailFan</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="trains.html">Trains</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="lines.html">Lines</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="companies.html">Operators</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tickets.html">Tickets</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-3">
+        <div>
+            <div class="category-header">
+                <div id="line-icon" class="d-flex line-icon justify-content-center align-items-center mr-3">
+                    <span id="line-shortname"></span>
+                </div>
+                <div>
+                    <h1 id="line-name" class="mb-0">Line name</h1>
+                    <h6 id="line-name-jp"class="white mb-0">Japanese name</h6>
+                </div>
+            </div>
+            <hr class="divider">
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-lg-6">
+                <div class="card subcategory-header mb-3" id="line-header">
+                    <div style="background-color: #035d67;" class="subcategory-line-color mr-3">
+                        <span class="material-symbols-sharp subcategory-icon">help</span>
+                    </div>
+                    <h2>About</h2>
+                </div>
+                <p id="line-desc"></p>
+            </div>
+            <div class="col-lg-6">
+                <div class="card subcategory-header mb-3" id="line-header">
+                    <div style="background-color: #035d67;" class="subcategory-line-color mr-3">
+                        <span class="material-symbols-sharp subcategory-icon">square_foot</span>
+                    </div>
+                    <h2>Specifications</h2>
+                </div>
+                <div>
+                    <table class="table">
+                        <tr>
+                            <th>Spec</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>Opened</td>
+                            <td id="line-open"></td>
+                        </tr>
+                        <tr>
+                            <td>Line Length</td>
+                            <td id="line-length"></td>
+                        </tr>
+                        <tr>
+                            <td>Track Gauge</td>
+                            <td id="line-track"></td>
+                        </tr>
+                        <tr>
+                            <td>Maximum Speed</td>
+                            <td id="line-speed"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/line.js"></script>
+</body>
+</html>

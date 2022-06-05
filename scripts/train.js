@@ -9,10 +9,11 @@ var galleryImgsHtml = ""
 if (id == null) {
     window.location.href = "./trains.html";
 }
-console.log(id)
+
 var train = trains[id]
 
 // Set the info panels
+document.title = train.name + " - JapanRailFan"
 document.getElementById("train-name").innerHTML = train.name
 document.getElementById("train-desc").innerHTML = train.description
 document.getElementById("train-built").innerHTML = train.built
@@ -30,7 +31,7 @@ function setLines(id, index) {
 // Set Carousel
 train.images.forEach(setGallery)
 function setGallery(path, index) {
-    carouselGalleryHtml += index == 0 ? '<div class="carousel-item active"><img class="d-block w-100" src="' + path + '"></div>' : '<div class="carousel-item"><img class="d-block w-100" src="' + path + '"></div>'
+    carouselGalleryHtml += index == 0 ? '<div class="carousel-item active"><img class="d-block w-100 carousel-gallery-img" src="' + path + '"></div>' : '<div class="carousel-item"><img class="d-block w-100 carousel-gallery-img" src="' + path + '"></div>'
     galleryImgsHtml += index == 0 ? '<div class="col-4 mb-3"><img id="train-gallery-img-' + index + '" class="gallery-img w-100 h-shadow active" src="' + path + '" onclick="changeGallerySlide(' + index + ')"></div>' : '<div class="col-4 mb-3"><img id="train-gallery-img-' + index + '" class="gallery-img w-100 h-shadow" src="' + path + '" onclick="changeGallerySlide(' + index + ')"></div>'
 }
 
