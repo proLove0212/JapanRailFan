@@ -13,7 +13,7 @@ for (const [lineKey, value] of Object.entries(lines)) {
         }
     }
 
-    var baseHtml = '<div class="mb-3" id="line-' + lineKey + '"><div class="card subcategory-header mb-3" id="line-1-header"><div style="background-color: #' + value.color + ';" class="subcategory-line-color mr-3"><span class="material-symbols-sharp subcategory-icon">route</span></div><h2>' + value.name + '</h2></div><div><div class="row" id="line-' + lineKey + '-content">' + trainHtml + '</div></div></div>';
+    var baseHtml = '<div class="mb-3" id="line-' + lineKey + '"><div class="card subcategory-header align-items-center mb-3" id="line-1-header"><div style="background-color: #' + value.color + ';" class="subcategory-line-color mr-3"><span class="material-symbols-sharp subcategory-icon">route</span></div><h2 class="mb-0">' + value.name + '</h2></div><div><div class="row" id="line-' + lineKey + '-content">' + trainHtml + '</div></div></div>';
     content.innerHTML += baseHtml
 }
 

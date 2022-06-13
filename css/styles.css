@@ -8,6 +8,7 @@ My css template for bootstrap projects and personal site
 /*--- Universal Styles ---*/
 
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
 
 
 :root {
@@ -20,7 +21,7 @@ My css template for bootstrap projects and personal site
 }
 
 * {
-    font-family: 'DotGothic16', sans-serif;
+    font-family: 'RocknRoll One', sans-serif;
 }
 
 body {
