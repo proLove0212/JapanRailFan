@@ -22,5 +22,12 @@
 - https://commons.wikimedia.org/wiki/File:Series-E235-0_9.jpg - MaedaAkihiko
 - https://commons.wikimedia.org/wiki/File:Yamanote_Line_E235_Ikebukuro_20150326.JPG - DAJF
 
+This website uses the following Javascript/CSS libraries
+- Bootstrap 4.6
+- JQuery 3.5.1
+
 This website uses icons from Material Icons (Free set of icons)
 - https://fonts.google.com/icons
+
+This website uses the following fonts
+- RocknRoll One (English & Japanese) by Fontworks Inc.: https://github.com/fontworks-fonts/RocknRoll
