@@ -11,8 +11,10 @@ if (id == null) {
 }
 
 var train = trains[id]
+var operator = operators[train.operator]
 
 // Set the info panels
+var operatorLink = '<td id="line-operator"><a href="./company.html?operator=' + train.operator + '">' + operator.name + '</a></td>'
 document.title = train.name + " - JapanRailFan"
 document.getElementById("train-name").innerHTML = train.name
 document.getElementById("train-desc").innerHTML = train.description
@@ -20,6 +22,7 @@ document.getElementById("train-built").innerHTML = train.built
 document.getElementById("train-cars").innerHTML = train.cars
 document.getElementById("train-capacity").innerHTML = train.capacity
 document.getElementById("train-image").src = train.images[0]
+document.getElementById("train-operator").innerHTML = operatorLink
 
 // Set lines
 train.line.forEach(setLines)

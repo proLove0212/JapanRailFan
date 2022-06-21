@@ -11,8 +11,10 @@ if (id == null) {
 }
 
 var line = lines[id]
+var operator = operators[line.operator]
 
 // Set the info panels
+var operatorLink = '<td id="line-operator"><a href="./company.html?operator=' + line.operator + '">' + operator.name + '</a></td>'
 document.title = line.name + " - JapanRailFan"
 document.getElementById("line-name").innerHTML = line.name
 document.getElementById("line-name-jp").innerHTML = line.japaneseName
@@ -23,6 +25,7 @@ document.getElementById("line-length").innerHTML = line.length + " km"
 document.getElementById("line-track").innerHTML = line.track + " mm"
 document.getElementById("line-speed").innerHTML = line.speed + " km/h"
 document.getElementById("line-desc").innerHTML = line.description
+document.getElementById("line-operator").innerHTML = operatorLink
 
 // Get rolling stock information
 for (const [trainKey, trainValue] of Object.entries(trains)) {

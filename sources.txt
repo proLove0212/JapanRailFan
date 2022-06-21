@@ -22,6 +22,11 @@
 - https://commons.wikimedia.org/wiki/File:Series-E235-0_9.jpg - MaedaAkihiko
 - https://commons.wikimedia.org/wiki/File:Yamanote_Line_E235_Ikebukuro_20150326.JPG - DAJF
 
+-- Logos --
+- JR East: https://commons.wikimedia.org/wiki/File:JR_logo_(east).svg
+- Tokyo Metro: https://commons.wikimedia.org/wiki/File:Tokyo_Metro_combined_logo.svg
+- Toei Subway: https://en.wikipedia.org/wiki/File:PrefSymbol-Tokyo.svg
+
 This website uses the following Javascript/CSS libraries
 - Bootstrap 4.6
 - JQuery 3.5.1

@@ -45,6 +45,7 @@ const operators = {
     1: {
         name: "JR East",
         japaneseName: "山手線東日本旅客鉄道株式会社",
+        logo: "./imgs/JR-East-logo.svg",
         description: "JR East is a Japanese train company that operates trains in the Kanto, Koshinetsu and Tohoku regions. It also operates all of the Shinkansen services north of Tokyo (Except for Hokkaido).",
         open: 1987
     }
@@ -61,7 +62,8 @@ const trains = {
         ],
         line: ["1"],
         cars: 11,
-        capacity: 1628
+        capacity: 1628,
+        operator: 1
     },
     2: {
         name: "E231 Series",
@@ -75,6 +77,7 @@ const trains = {
         ],
         line: ["1", "2"],
         cars: 11,
-        capacity: 1628
+        capacity: 1628,
+        operator: 1
     }
 }
