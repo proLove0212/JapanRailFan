@@ -19,6 +19,6 @@ for (const [lineKey, value] of Object.entries(lines)) {
 
 for (const [trainKey, trainValue] of Object.entries(trains)) {
     if (trainValue.line.length == 0) {
-        othersHtml += '<div class="col-md-4" id="train-' + trainKey + '"><a href="./train.html?train=' + trainKey + '"><div class="card h-100 h-shadow"><img class="card-img-top" src="' + trainValue.images[0] + '"><div class="card-body d-flex align-items-center"><h5 class="flex-fill m-0">' + trainValue.name + '</h5><span class="material-symbols-sharp white">chevron_right</span></div></div></a></div>'
+        othersHtml += '<div class="col-md-4" id="train-' + trainKey + '"><a href="./train.html?train=' + trainKey + '"><div class="card h-100 h-shadow"><img class="card-img-top" src="' + trainValue.images[0] + '"><div class="card-body d-flex align-items-center"><h5 class="flex-fill m-0 card-title">' + trainValue.name + '</h5><span class="material-symbols-sharp white">chevron_right</span></div></div></a></div>'
     }
 }
