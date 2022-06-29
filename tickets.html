@@ -10,6 +10,7 @@
     <script src="./scripts/popper.min.js"></script>
     <script src="./scripts/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#008d00">
     <title>Tickets - JapanRailFan</title>
 </head>
 <body>
@@ -42,13 +43,44 @@
         <div>
             <div class="category-header">
                 <div class="card justify-content-center align-items-center p-3 mr-3">
-                    <span class="material-symbols-sharp category-icon">payments</span>
+                    <span class="material-symbols-sharp category-icon">confirmation_number</span>
                 </div>
                 <h1 class="mb-0">Tickets</h1>
             </div>
             <hr class="divider">
         </div>
-        
+        <div class="main" id="main">
+            <div class="row mb-3">
+                <div class="col-12">
+                    <a href="./calculator.html">
+                        <div class="card h-shadow">
+                            <div class="card-body d-flex justify-content-center align-items-center">
+                                <span class="material-symbols-sharp category-icon mr-2">calculate</span>
+                                <p class="white my-3">Open calculator</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row" id="tickets">
+                <div class="col-md-6 col-lg-4 mb-3">
+                    <a href="#">
+                        <div class="card h-shadow">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <h5 id="ticket-name" class="card-title flex-fill m-0">Sample Card</h5>
+                                    <span class="material-symbols-sharp white">chevron_right</span>
+                                </div>
+                                <small id="ticket-valid" class="white">7, 14, 21 consecutive days</small>
+                                <p id="ticket-desc" class="m-0 mt-3">A sample rail pass used for calculation and displaying ticket information. It includes a 7, 14, and 21 days option to choose from.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
+    <script src="./scripts/data.js"></script>
+    <script src="./scripts/tickets.js"></script>
 </body>
 </html>

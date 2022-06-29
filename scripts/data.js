@@ -81,3 +81,14 @@ const trains = {
         operator: 1
     }
 }
+
+const tickets = {
+    1: {
+        name: "Sample rail pass",
+        description: "A sample rail pass used for calculation and displaying ticket information. It includes a 7, 14, and 21 days option to choose from.",
+        valid: [7, 14, 21],
+        cost: [2100, 3800, 5000],
+        vaildConsecutive: true,
+        operators: [1]
+    }
+}
