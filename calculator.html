@@ -58,7 +58,7 @@
         </div>
         <div class="row mb-3">
             <div class="col-12 d-flex">
-                <button class="custom-btn mr-3 d-flex justify-content-center">
+                <button class="custom-btn mr-3 d-flex justify-content-center" data-toggle="modal" data-target="#saveListModal">
                     <span class="material-symbols-sharp">save</span>
                     <span class="d-none d-md-inline ml-1">Save</span>
                 </button>
@@ -135,7 +135,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Delete List?</h5>
+                    <h5 class="modal-title">Delete List?</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -145,8 +145,58 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteListButtonClicked()" data-dismiss="modal">Delete</button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Save List Modal -->
+    <div class="modal fade" id="saveListModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Save As?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="row mb-3">
+                            <!--Save list div-->
+                            <div class="col-12 mb-1">
+                                <div class="card gray">
+                                    <div class="card-body">
+                                        <div class="mb-1">
+                                            <strong class="white">Sample Save</strong><br>
+                                            <small class="m-0 white">3 Items</small>
+                                        </div>
+                                        <div class="d-flex">
+                                            <button class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center" data-toggle="tooltip" data-placement="bottom" title="Save to List">
+                                                <span class="material-symbols-sharp">save_as</span>
+                                            </button>
+                                            <button class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center" data-toggle="tooltip" data-placement="bottom" title="Delete List">
+                                                <span class="material-symbols-sharp">delete</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                        <div>
+                            <label for="save-name">List name:</label><br>
+                            <input id="save-name" class="w-100" placeholder="List name..." required>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Export JSON</button>
+                        <input type="submit" class="btn btn-primary" value="Save">
+                    </div>
+                </form>
             </div>
         </div>
     </div>

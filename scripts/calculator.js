@@ -17,7 +17,7 @@ function initCalculator() {
             const price = item.price * item.quantity
             const duration = ticket.valid[item.duration]
             const quantity = item.quantity
-            const itemHtml = '<div class="col-12"><div class="card mb-3"><div class="card-body"><div class="d-flex mb-3"><div class="flex-fill"><h5 id="ticket-name-' + index + '" class="card-title">' + name + '</h5><p id="ticket-qty-days-' + index + '" class="m-0">' + quantity + ' Persons - ' + duration + ' Days</p></div><div><h5 id="ticket-price-' + index + '">¥' + price + '</h5></div></div><div class="d-flex"><button id="add-item-btn-' + index + '" onclick="addItemButtonClicked(this)" class="custom-btn mr-3 d-flex justify-content-center"><span class="material-symbols-sharp">add</span></button><button id="minus-item-btn-' + index + '" onclick="minusItemButtonClicked(this)" id="item-add-btn-' + index + '" class="custom-btn mr-3 d-flex justify-content-center"><span class="material-symbols-sharp">remove</span></button><button id="delete-item-btn-' + index + '" onclick="deleteItemButtonClicked(this)" class="custom-btn mr-3 d-flex justify-content-center"><span class="material-symbols-sharp">delete</span></button></div></div></div></div>'
+            const itemHtml = '<div class="col-12" id="item-' + index + '"><div class="card mb-3"><div class="card-body"><div class="d-flex mb-3"><div class="flex-fill"><h5 id="ticket-name-' + index + '" class="card-title">' + name + '</h5><p id="ticket-qty-days-' + index + '" class="m-0">' + quantity + ' Persons - ' + duration + ' Days</p></div><div><h5 id="ticket-price-' + index + '">¥' + price + '</h5></div></div><div class="d-flex"><button id="add-item-btn-' + index + '" onclick="addItemButtonClicked(this)" class="custom-btn mr-3 d-flex justify-content-center" data-toggle="tooltip" data-placement="bottom" title="Increase Quantity"><span class="material-symbols-sharp">add</span></button><button id="minus-item-btn-' + index + '" onclick="minusItemButtonClicked(this)" class="custom-btn mr-3 d-flex justify-content-center" data-toggle="tooltip" data-placement="bottom" title="Decrease Quantity"><span class="material-symbols-sharp">remove</span></button><button id="delete-item-btn-' + index + '" onclick="deleteItemButtonClicked(this)" class="custom-btn mr-3 d-flex justify-content-center" data-toggle="tooltip" data-placement="bottom" title="Delete Item"><span class="material-symbols-sharp">delete</span></button></div></div></div></div>'
             calculatorList.innerHTML += itemHtml
             calculatorTotalPrice.innerHTML = "¥" + calculateCalculatorList()
         });
@@ -56,7 +56,7 @@ function minusItemButtonClicked(element) {
     const item = list.items[itemId]
     const ticket = tickets[item.ticketId]
 
-    if (parseInt(parseInt(item.quantity)) == 1) {
+    if (parseInt(item.quantity) == 1) {
         alert("Minimum of 1 ticket (WIP)")
         return
     }
@@ -74,12 +74,20 @@ function minusItemButtonClicked(element) {
 
 // Delete button function for individual items
 function deleteItemButtonClicked(element) {
-    alert(element.id)
+    const itemId = element.id.replace("delete-item-btn-", "")
+
+    // Delete item and save
+    list.items.splice(itemId, 1)
+    localStorage.setItem("currentCalculatorList", JSON.stringify(list))
+    document.getElementById("item-" + itemId).remove()
+    calculatorTotalPrice.innerHTML = "¥" + calculateCalculatorList()
 }
 
 // Delete button function for entire list
 function deleteListButtonClicked() {
-
+    localStorage.removeItem("currentCalculatorList")
+    list = JSON.parse(localStorage.getItem("currentCalculatorList"))
+    initCalculator()
 }
 
 // Init on first load

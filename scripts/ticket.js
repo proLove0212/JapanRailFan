@@ -52,4 +52,5 @@ $("#calculator-form").submit(function (e) {
 
     insertCalculatorList(id,durationChoice, price, quantity)
     createAlert("alert-area", "alert-success", "<strong>Successfully created.</strong> View the calculator <a class='alert-link' href='./calculator.html'>here</a>.")
+    window.scrollTo(0,0)
 });

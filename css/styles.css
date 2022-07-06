@@ -35,8 +35,7 @@ h3,
 h4,
 h5,
 h6,
-article,
-label {
+article {
     color: var(--text-colour);
 }
 
@@ -88,6 +87,10 @@ footer a:hover {
 .card {
     background-color: var(--primary-light-colour);
     border-radius: 0px;
+}
+
+.card.gray {
+    background-color: gray;
 }
 
 .list-group {
@@ -194,6 +197,15 @@ table td, table th {
 
 .custom-btn:active {
     box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.custom-btn.transparent-btn {
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.custom-btn.transparent-btn:hover {
+    background-color: rgba(0,0,0,.125);
 }
 
 .nav-btn {
