@@ -34,9 +34,7 @@ function insertCalculatorList(ticketId, duration, price, quantity) {
 }
 
 // Function to return the total cost in a LocalStorage list
-function calculateCalculatorList() {
-    // Get the current list from localstorage to calculate
-    const list = JSON.parse(localStorage.getItem("currentCalculatorList"))
+function calculateCalculatorList(list) {
     var sum = 0
 
     // Loop list to sum up total
