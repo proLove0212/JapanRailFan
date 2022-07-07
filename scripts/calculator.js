@@ -186,5 +186,17 @@ function deleteSaveButtonClicked() {
     createAlert("save-alert-area", "alert-success", "Successfully deleted!")
 }
 
+// Listener for LocalStorage changes to update lists/saves
+window.addEventListener('storage', (e) => {
+    // Check whether saves or the current list is being updated and sync
+    if (e.key == "currentCalculatorList") {
+        list = JSON.parse(e.newValue)
+        initCalculator()
+    } else if (e.key == "calculatorSaves") {
+        saves = JSON.parse(e.newValue)
+        initSaveModal()
+    }
+});
+
 // Init on first load
 initCalculator()
