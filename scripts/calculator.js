@@ -56,7 +56,7 @@ function initLoadSaveModal(type) {
                     const saveItemCount = save.items.length
                     const saveTotalCost = calculateCalculatorList(save)
                     if (type == "save") {
-                        const saveHtml = '<div class="col-12 mb-1"><div class="card gray"><div class="card-body"><div class="mb-1"><strong class="white">' + saveName + '</strong><br><small class="m-0 white">' + saveItemCount + ' Items - ¥' + saveTotalCost + '</small></div><div class="d-flex"><button type="button" id="save-saveas-btn-' + saveId + '" onclick="saveAsButtonClicked(this)"class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center"><span class="material-symbols-sharp">save_as</span></button><button type="button" id="save-delete-btn-' + saveId + '" onclick="saveDeleteButtonClicked(this)"class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center" data-toggle="modal" data-target="#deleteSaveModal" data-dismiss="modal"><span class="material-symbols-sharp">delete</span></button></div></div></div></div>'
+                        const saveHtml = '<div class="col-12 mb-1"><div class="card gray"><div class="card-body"><div class="mb-1"><strong class="white">' + saveName + '</strong><br><small class="m-0 white">' + saveItemCount + ' Items - ¥' + saveTotalCost + '</small></div><div class="d-flex"><button type="button" id="save-saveas-btn-' + saveId + '" onclick="saveAsButtonClicked(this)"class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center" title="Overwrite Save"><span class="material-symbols-sharp">save_as</span></button><button type="button" id="save-delete-btn-' + saveId + '" onclick="saveDeleteButtonClicked(this)"class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center" data-toggle="modal" data-target="#deleteSaveModal" data-dismiss="modal" title="Delete Saved List"><span class="material-symbols-sharp">delete</span></button></div></div></div></div>'
                         calculatorSaveList.innerHTML += saveHtml
                     } else if (type == "load") {
                         const saveHtml = '<div class="col-12 mb-1"><div class="card gray"><div class="card-body"><div class="mb-1"><strong class="white">' + saveName + '</strong><br><small class="m-0 white">' + saveItemCount + ' Items - ¥' + saveTotalCost + '</small></div><div class="d-flex"><button type="button" id="load-load-btn-' + saveId + '" onclick="loadButtonClicked(this)" title="Load List" class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center"><span class="material-symbols-sharp">input</span></button></div></div></div></div>'
@@ -188,6 +188,22 @@ $("#calculator-save-form").submit(function (e) {
     createAlert("save-alert-area", "alert-success", "Successfully saved!")
 })
 
+// On import save form submit
+$("#save-import-form").submit(function (e) {
+    e.preventDefault()
+
+    try {
+        var list = document.getElementById("import-list-textarea").value
+        localStorage.setItem("currentCalculatorList", list)
+        createAlert("alert-area","alert-success","List successfully imported")
+        initCalculator()
+    } catch (error) {
+        displayLoadingError(error)
+    }
+    
+    $('#importListModal').modal('hide')
+})
+
 // Function for delete button confirmation
 function deleteSaveButtonClicked() {
     delete saves[deleteSaveId]
@@ -201,8 +217,8 @@ function loadButtonClicked(element) {
     const itemId = element.id.replace("load-load-btn-", "")
     try {
         localStorage.setItem("currentCalculatorList", JSON.stringify(saves[itemId]))
-        initCalculator()
         createAlert("alert-area","alert-success","Saved list successfully loaded")
+        initCalculator()
     } catch (error) {
         displayLoadingError(error)
     }
