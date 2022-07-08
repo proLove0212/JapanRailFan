@@ -60,11 +60,11 @@
         <div class="row mb-3">
             <div class="col-12 d-flex">
                 <button class="custom-btn mr-3 d-flex justify-content-center" data-toggle="modal"
-                    data-target="#saveListModal" onclick="initSaveModal()">
+                    data-target="#saveListModal" onclick="initLoadSaveModal('save')">
                     <span class="material-symbols-sharp">save</span>
                     <span class="d-none d-md-inline ml-1">Save</span>
                 </button>
-                <button class="custom-btn mr-3 d-flex justify-content-center">
+                <button class="custom-btn mr-3 d-flex justify-content-center" data-toggle="modal" data-target="#loadListModal" onclick="initLoadSaveModal('load')">
                     <span class="material-symbols-sharp">draft</span>
                     <span class="d-none d-md-inline ml-1">Load</span>
                 </button>
@@ -179,7 +179,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Save As?</h5>
+                    <h5 class="modal-title">Save As</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -235,7 +235,100 @@
         </div>
     </div>
 
-    <!-- Export List Modal -->
+    <!-- Load List Modal -->
+    <div class="modal fade" id="loadListModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Load</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="load-alert-area" class="">
+
+                    </div>
+                    <div id="calculator-load-list" class="row mb-3">
+                        <!--Load list div-->
+                        <div class="col-12 mb-1">
+                            <div class="card gray">
+                                <div class="card-body">
+                                    <div class="mb-1">
+                                        <strong class="white">Sample Load</strong><br>
+                                        <small class="m-0 white">3 Items - ¥10000</small>
+                                    </div>
+                                    <div class="d-flex">
+                                        <button type="button" id="load-load-btn-savename" onclick="loadButtonClicked(this)" title="Load List"
+                                            class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center">
+                                            <span class="material-symbols-sharp">input</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-12">
+                            <div class="card gray">
+                                <div class="card-body d-flex justify-content-center align-items-center">
+                                    <h6 class="m-0">No Existing Saves</h6>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#importListModal" onclick="exportlistButtonClicked()">Import JSON</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete List Modal -->
+    <div class="modal fade" id="deleteListModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete List?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Delete the list? The action cannot be undone.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Import JSON</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteListButtonClicked()"
+                        data-dismiss="modal">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Import Save Modal -->
+    <div class="modal fade" id="importListModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Import JSON</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="save-import-form">
+                    <div class="modal-body">
+                        <textarea id="import-list-textarea" class="w-100" rows="10" placeholder="Paste JSON here..." required></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Import</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Save Modal-->
     <div class="modal fade" id="exportListModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -246,7 +339,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <textarea id="export-list-textarea" class="w-100" readonly>This is a textarea</textarea>
+                    <textarea id="export-list-textarea" class="w-100" rows="10" readonly>This is a textarea</textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

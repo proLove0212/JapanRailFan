@@ -6,7 +6,7 @@ var saves = ""
 var deleteSaveId = ""
 const calculatorList = document.getElementById("calculator-list")
 const calculatorSaveList = document.getElementById("calculator-save-list")
-// const calculatorLoadList = document.getElementById("calculator-load-list")
+const calculatorLoadList = document.getElementById("calculator-load-list")
 const calculatorTotalPrice = document.getElementById("calculator-total-price")
 
 // Init function
@@ -38,8 +38,13 @@ function initCalculator() {
     }
 }
 
-function initSaveModal() {
-    calculatorSaveList.innerHTML = ""
+function initLoadSaveModal(type) {
+    if (type == "save") {
+        calculatorSaveList.innerHTML = ""
+    } else if (type == "load") {
+        calculatorLoadList.innerHTML = ""
+    }
+    
     try {
         saves = JSON.parse(localStorage.getItem("calculatorSaves"))
         if (saves != null) {
@@ -50,22 +55,26 @@ function initSaveModal() {
                     const saveId = saveName.replace(/ /g, "-")
                     const saveItemCount = save.items.length
                     const saveTotalCost = calculateCalculatorList(save)
-                    const saveHtml = '<div class="col-12 mb-1"><div class="card gray"><div class="card-body"><div class="mb-1"><strong class="white">' + saveName + '</strong><br><small class="m-0 white">' + saveItemCount + ' Items - ¥' + saveTotalCost + '</small></div><div class="d-flex"><button type="button" id="save-saveas-btn-' + saveId + '" onclick="saveAsButtonClicked(this)"class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center"><span class="material-symbols-sharp">save_as</span></button><button type="button" id="save-delete-btn-' + saveId + '" onclick="saveDeleteButtonClicked(this)"class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center" data-toggle="modal" data-target="#deleteSaveModal" data-dismiss="modal"><span class="material-symbols-sharp">delete</span></button></div></div></div></div>'
-                    calculatorSaveList.innerHTML += saveHtml
-
+                    if (type == "save") {
+                        const saveHtml = '<div class="col-12 mb-1"><div class="card gray"><div class="card-body"><div class="mb-1"><strong class="white">' + saveName + '</strong><br><small class="m-0 white">' + saveItemCount + ' Items - ¥' + saveTotalCost + '</small></div><div class="d-flex"><button type="button" id="save-saveas-btn-' + saveId + '" onclick="saveAsButtonClicked(this)"class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center"><span class="material-symbols-sharp">save_as</span></button><button type="button" id="save-delete-btn-' + saveId + '" onclick="saveDeleteButtonClicked(this)"class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center" data-toggle="modal" data-target="#deleteSaveModal" data-dismiss="modal"><span class="material-symbols-sharp">delete</span></button></div></div></div></div>'
+                        calculatorSaveList.innerHTML += saveHtml
+                    } else if (type == "load") {
+                        const saveHtml = '<div class="col-12 mb-1"><div class="card gray"><div class="card-body"><div class="mb-1"><strong class="white">' + saveName + '</strong><br><small class="m-0 white">' + saveItemCount + ' Items - ¥' + saveTotalCost + '</small></div><div class="d-flex"><button type="button" id="load-load-btn-' + saveId + '" onclick="loadButtonClicked(this)" title="Load List" class="mr-1 p-1 custom-btn transparent-btn d-flex justify-content-center"><span class="material-symbols-sharp">input</span></button></div></div></div></div>'
+                        calculatorLoadList.innerHTML += saveHtml
+                    }
                 }
             } else {
-                displayNoSaves()
+                displayNoSaves(type == "save" ? calculatorSaveList : calculatorLoadList)
             }
         } else {
             saves = {}
-            displayNoSaves()
+            displayNoSaves(type == "save" ? calculatorSaveList : calculatorLoadList)
         }
     } catch (error) {
         // Reset the save value
         createAlert("alert-area","alert-danger","Failed to load saves. Existing saves has been erased")
         localStorage.setItem("calculatorSaves", JSON.stringify({}))
-        displayNoSaves()
+        displayNoSaves(type == "save" ? calculatorSaveList : calculatorLoadList)
     }
 }
 
@@ -76,9 +85,9 @@ function displayNoItems() {
     calculatorTotalPrice.innerHTML = "¥0"
 }
 
-function displayNoSaves() {
+function displayNoSaves(element) {
     // Show no items in the list
-    calculatorSaveList.innerHTML = '<div class="col-12"><div class="card gray mb-1"><div class="card-body d-flex justify-content-center align-items-center"><h6 class="m-0">No saved lists</h6></div></div></div>'
+    element.innerHTML = '<div class="col-12"><div class="card gray mb-1"><div class="card-body d-flex justify-content-center align-items-center"><h6 class="m-0">No saved lists</h6></div></div></div>'
 }
 
 function displayLoadingError(error) {
@@ -175,26 +184,40 @@ $("#calculator-save-form").submit(function (e) {
     saves[saveId] = list
     localStorage.setItem("currentCalculatorList", JSON.stringify(list))
     localStorage.setItem("calculatorSaves", JSON.stringify(saves))
-    initSaveModal()
+    initLoadSaveModal("save")
     createAlert("save-alert-area", "alert-success", "Successfully saved!")
 })
 
+// Function for delete button confirmation
 function deleteSaveButtonClicked() {
     delete saves[deleteSaveId]
     localStorage.setItem("calculatorSaves", JSON.stringify(saves))
-    initSaveModal()
+    initLoadSaveModal("save")
     createAlert("save-alert-area", "alert-success", "Successfully deleted!")
+}
+
+// Function for saved list load button
+function loadButtonClicked(element) {
+    const itemId = element.id.replace("load-load-btn-", "")
+    try {
+        localStorage.setItem("currentCalculatorList", JSON.stringify(saves[itemId]))
+        initCalculator()
+        createAlert("alert-area","alert-success","Saved list successfully loaded")
+    } catch (error) {
+        displayLoadingError(error)
+    }
+    
+    $('#loadListModal').modal('hide')
 }
 
 // Listener for LocalStorage changes to update lists/saves
 window.addEventListener('storage', (e) => {
     // Check whether saves or the current list is being updated and sync
     if (e.key == "currentCalculatorList") {
-        list = JSON.parse(e.newValue)
         initCalculator()
     } else if (e.key == "calculatorSaves") {
-        saves = JSON.parse(e.newValue)
-        initSaveModal()
+        initLoadSaveModal("save")
+        initLoadSaveModal("load")
     }
 });
 
