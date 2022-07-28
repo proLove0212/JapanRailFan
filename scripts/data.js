@@ -230,10 +230,10 @@ const trains = {
 
 const tickets = {
     1: {
-        name: "Sample Pass",
-        description: "A sample rail pass used for calculation and displaying ticket information. It includes a 7, 14, and 21 days option to choose from.",
+        name: "Japan Rail Pass",
+        description: "The Japan Rail Pass (also commonly called JR Pass) is a very cost effective rail pass for long distance train travel in Japan. The pass can be used only by foreign tourists and offers unlimited rides on JR trains for one, two or three weeks at a cost that residents of Japan can only dream of. It comes in two types: ordinary and green car. The latter is valid on green cars (first class cars) that offer more spacious seats than ordinary cars.",
         valid: [7, 14, 21],
-        cost: [2100, 3800, 5000],
+        cost: [29650, 47250, 60450],
         vaildConsecutive: true,
         operators: [1]
     }

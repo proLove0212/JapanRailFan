@@ -6,10 +6,7 @@ My css template for bootstrap projects and personal site
 ---*/
 
 /*--- Universal Styles ---*/
-
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
-
 
 :root {
     --primary-colour: #194019;
@@ -89,10 +86,6 @@ footer a:hover {
     border-radius: 0px;
 }
 
-.card.gray {
-    background-color: gray;
-}
-
 .list-group {
     border-radius: 0px;
 }
@@ -125,24 +118,9 @@ footer a:hover {
     color: var(--primary-colour);
 }
 
-.card-expendable-icon {
-    color: white;
-    background-color: var(--primary-colour);
-    border-radius: 8px;
-}
-
-.card-expendable {
-    cursor: pointer;
-}
-
 .card-title,
-.display-5,
-.counter-num {
+.display-5 {
     font-weight: 700;
-}
-
-.option-btn {
-    padding: 0.25rem 0.5rem !important;
 }
 
 .table {
@@ -158,10 +136,6 @@ table td, table th {
 
 /*--- Custom element Styles ---*/
 
-.alert {
-    border-radius: 8px;
-}
-
 .custom-btn {
     border-radius: 4px;
     background-color: var(--secondary-colour);
@@ -174,28 +148,20 @@ table td, table th {
     text-align: center;
 }
 
-.custom-btn.disabled {
+.custom-btn:disabled {
     background-color: var(--disabled-colour);
     color: white;
-    box-shadow: none;
-}
-
-.custom-btn.disabled:hover,
-.custom-btn.disabled:active {
-    background-color: var(--disabled-colour);
-    color: white;
-    box-shadow: none;
     cursor: not-allowed;
 }
 
-.custom-btn:hover {
+.custom-btn:hover:enabled {
     text-decoration: none;
     color: white;
     background-color: var(--secondary-colour-dark);
     box-shadow: none;
 }
 
-.custom-btn:active {
+.custom-btn:active:enabled {
     box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
@@ -208,62 +174,15 @@ table td, table th {
     background-color: rgba(0,0,0,.125);
 }
 
-.nav-btn {
-    padding: 0.375rem 0.75rem !important;
-    display: inline-flex;
-}
-
-.danger,
-.danger:hover,
-.logout,
-.logout:hover {
-    background-color: red;
-    color: white;
-}
-
-.custom-input {
-    border-radius: 4px;
-    background-color: white;
-    color: black;
-    padding: 0.75rem;
-    border: none;
-    transition-duration: 0.25s;
-    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
-    line-height: normal;
-    height: 43px;
-}
-
-.custom-input:hover {
-    text-decoration: none;
-    box-shadow: none;
-}
-
-.custom-input:focus {
-    text-decoration: none;
-    box-shadow: inset 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
-}
-
-.card-columns .card {
-    margin-bottom: 1rem !important;
-}
-
 .modal-title {
     color: black;
 }
 
-.inherit-radius {
-    border-radius: inherit;
-}
-
-.no-radius {
-    border-radius: 0;
-}
-
-.no-border {
-    border-width: 0;
-}
-
 /*--- Website Specific Styles ---*/
+
+.gray {
+    background-color: grey;
+}
 
 .card-img-top {
     border-top-left-radius: 0;

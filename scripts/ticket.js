@@ -23,7 +23,7 @@ ticket.valid.forEach(function(item, index) {
 
     calculatorDurationHtml += '<option value="' + index + '">' + days + ' Days</option>'
     durationCell.innerHTML = days + " Days"
-    priceCell.innerHTML = "¥" + price
+    priceCell.innerHTML = "¥" + numberWithCommas(price)
 });
 
 for (const [lineKey, value] of Object.entries(lines)) {

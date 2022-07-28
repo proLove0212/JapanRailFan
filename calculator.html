@@ -59,7 +59,7 @@
         </div>
         <div class="row mb-3">
             <div class="col-12 d-flex">
-                <button class="custom-btn mr-3 d-flex justify-content-center" data-toggle="modal"
+                <button id="save-btn" class="custom-btn mr-3 d-flex justify-content-center" data-toggle="modal"
                     data-target="#saveListModal" onclick="initLoadSaveModal('save')">
                     <span class="material-symbols-sharp">save</span>
                     <span class="d-none d-md-inline ml-1">Save</span>
@@ -223,7 +223,7 @@
                         </div>
                         <div>
                             <label for="save-name">List name:</label><br>
-                            <input id="save-name" class="w-100" placeholder="List name..." required>
+                            <input id="save-name" class="w-100" placeholder="List name..." pattern="[^'\x22]*$" title="No quotation marks allowed in the list name" required>
                         </div>
                     </div>
                     <div class="modal-footer">

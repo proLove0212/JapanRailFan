@@ -14,3 +14,8 @@ function createAlert(id ,type, message) {
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
+
+//Add a comma in every thousand
+function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
