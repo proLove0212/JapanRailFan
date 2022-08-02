@@ -193,6 +193,8 @@ a.white:hover {
 .card-img-top {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    height: 250px;
+    object-fit: cover;
 }
 
 .intro-icon {

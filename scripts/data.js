@@ -146,6 +146,30 @@ const lines = {
         track: 1435,
         length: 18.3
     },
+    9: {
+        name: "Toei Oedo Line",
+        japaneseName: "都営地下鉄大江戸線",
+        shortName: "E",
+        description: "The Toei Oedo Line (都営地下鉄大江戸線, Toei Chikatetsu Oedo-sen) is a subway line in Tokyo, Japan, operated by the Tokyo Metropolitan Bureau of Transportation (Toei). It commenced full operations on December 12, 2000; using the Japanese calendar this reads '12/12/12' as the year 2000 equals Heisei 12. The line is completely underground, making it the second-longest railway tunnel in Japan after the Seikan Tunnel.",
+        color: "8B008B",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/6/6c/Toei-subway12-600.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/2/23/Toei-Tocho-mae-Station-01.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/1/11/Tochomae_Station_Platform_2018.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/0/00/Toei-subway-E04-Ushigome-yanagicho-station-platform-20190919-112240.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/e/eb/Toei-subway-E18-Tsukijishijo-station-platform-20191201-120943.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/7/77/Toei-subway-E17-Kachidoki-station-platform-2-20190919-155424.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/e/e4/Toei-subway-E17-Kachidoki-station-entrance-A3b-20190919-160209.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/5/5b/Toei-subway-E27-Shinjuku-station-sign-20191201-133658.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/5/57/Linemap_of_Tokyo_Metropolitan_Government_Bureau_of_Transportation_Oedo_Line.PNG",
+            "https://2.bp.blogspot.com/-Dfj2tLXZwS8/WmCX2u72OMI/AAAAAAAAFMU/t66Dr1vY1vMqUDFQS2zjrQO26ufCjfJQQCLcBGAs/s1600/%25E9%2583%25BD%25E5%2596%25B6%25E5%25A4%25A7%25E6%25B1%259F%25E6%2588%25B8%25E7%25B7%259A.png"
+        ],
+        operator: 4,
+        open: 2000,
+        speed: 70,
+        track: 1435,
+        length: 40.7
+    },
 }
 
 const operators = {
@@ -299,7 +323,39 @@ const trains = {
         cars: 10,
         capacity: 1300,
         operator: 4
-    }
+    },
+    9: {
+        name: "Toei 12-600 series",
+        description: "The Toei 12-600 series is used by Toei Subway to operate the Toei Oedo Line in Tokyo, Japan. It is a new batch of sets derived from the original Toei 12-000 series that started delivering for operation in 2011. The train comes in a 8-car configuration.",
+        built: "2011 - present",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/6/6c/Toei-subway12-600.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/e/e5/Toei_12-001.JPG",
+            "https://upload.wikimedia.org/wikipedia/commons/5/53/Toei12-000-Inside10.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/6/6a/Toei-subway_12-614_Wheelchair_space_Inside.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/1/1d/12-000_prototype_at_Magome_depot.jpg",
+        ],
+        line: ["9"],
+        cars: 8,
+        capacity: 780,
+        operator: 4
+    },
+    10: {
+        name: "205 Series",
+        description: "he 205 series was designed in 1982 as a cheap-to-produce train that could complement the 201 series sets which were considered to be expensive to produce due to the latter's thyristor chopper-controlled traction systems. The first set entered service on the Yamanote Line on 1985, and has remained a staple of the JR fleet network ever since. It was originally built with resistor-controlled traction systems, as they were cheaper to produce than thyristor chopper-controlled motors or something similar to that, but this was somewhat dated technology due to the advent of the variable frequency drive. It uses a traditional design with an unpainted stainless steel body very much like most trains of the period. Each set has a different color scheme to indicate which area the sets serve.",
+        built: "1985 - 1991",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/6/6c/Yamanote_Line_205_series_set_30_Tabata_Station_20030202.JPG",
+            "https://upload.wikimedia.org/wikipedia/commons/a/a2/Jr_t204standing.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/8/84/JRE_EC205_inside.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f0/Inside-JNR205-04.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/1/15/JRE_205-KeiyouLine_Commuter_Special_Rapid.jpg",
+        ],
+        line: ["1", "2"],
+        cars: 10,
+        capacity: 1628,
+        operator: 1
+    },
 }
 
 const tickets = {
