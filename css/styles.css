@@ -180,6 +180,12 @@ table td, table th {
 
 /*--- Website Specific Styles ---*/
 
+a.white:hover {
+    text-decoration: underline;
+    opacity: 0.75;
+    color: white;
+}
+
 .gray {
     background-color: grey;
 }

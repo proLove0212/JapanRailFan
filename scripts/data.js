@@ -94,7 +94,7 @@ const lines = {
         length: 24.0
     },
     6: {
-        name: "Odakyu Odawara Line",
+        name: "Odawara Line",
         japaneseName: "小田急小田原線",
         shortName: "OH",
         description: "The Odakyu Odawara Line (小田急小田原線, Odakyu-Odawara-sen) is the main line of Japanese private railway operator Odakyu Electric Railway. It extends 82.5 km from Shinjuku in central Tokyo through the southwest suburbs to the city of Odawara, the gateway to Hakone in Kanagawa Prefecture. It is a busy commuter line and is also known for its 'Romancecar' limited express services. From Yoyogi-Uehara Station some trains continue onto the Tokyo Metro Chiyoda Line and beyond to the East Japan Railway Company Joban Line.",
@@ -109,6 +109,42 @@ const lines = {
         speed: 110,
         track: 1067,
         length: 82.5
+    },
+    7: {
+        name: "Shinjuku Line",
+        japaneseName: "新宿線",
+        shortName: "S",
+        description: "The Odakyu Odawara Line (小田急小田原線, Odakyu-Odawara-sen) is the main line of Japanese private railway operator Odakyu Electric Railway. It extends 82.5 km from Shinjuku in central Tokyo through the southwest suburbs to the city of Odawara, the gateway to Hakone in Kanagawa Prefecture. It is a busy commuter line and is also known for its 'Romancecar' limited express services. From Yoyogi-Uehara Station some trains continue onto the Tokyo Metro Chiyoda Line and beyond to the East Japan Railway Company Joban Line.",
+        color: "6cbb5a",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/8/8b/Toei_Type10-300.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/5/54/Toei-subway-S07-Ogawamachi-station-platform-20191201-163722.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/f/fd/Jimbocho-Sta-A3.JPG",
+            "https://upload.wikimedia.org/wikipedia/commons/7/72/Toei-subway-S12-Kikukawa-station-platform-20190831-144335.jpg",
+        ],
+        operator: 4,
+        open: 1978,
+        speed: 75,
+        track: 1067,
+        length: 23.5
+    },
+    8: {
+        name: "Asakusa Line",
+        japaneseName: "浅草線",
+        shortName: "A",
+        description: "The Odakyu Odawara Line (小田急小田原線, Odakyu-Odawara-sen) is the main line of Japanese private railway operator Odakyu Electric Railway. It extends 82.5 km from Shinjuku in central Tokyo through the southwest suburbs to the city of Odawara, the gateway to Hakone in Kanagawa Prefecture. It is a busy commuter line and is also known for its 'Romancecar' limited express services. From Yoyogi-Uehara Station some trains continue onto the Tokyo Metro Chiyoda Line and beyond to the East Japan Railway Company Joban Line.",
+        color: "ec6e65",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/9/97/Toei-A01-Nishi-magome-station-platform.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/4/40/Takanawadai_Station_exit_2018_7_9.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/f/fe/Asakusa_line_-_Daimon_stn_ticket_gates_-_Jan_26_2018.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/0/0a/Asakusa_Station_Sign_%28Asakusa_Line%29.jpg",
+        ],
+        operator: 4,
+        open: 1960,
+        speed: 70,
+        track: 1435,
+        length: 18.3
     },
 }
 
@@ -132,6 +168,13 @@ const operators = {
         japaneseName: "小田急電鉄株式会社",
         logo: "https://upload.wikimedia.org/wikipedia/commons/a/ad/OdakyuGroup_logo.svg",
         description: "The Odakyu Electric Railway Company, Ltd. (小田急電鉄株式会社, Odakyū Dentetsu kabushiki gaisha), commonly known as Odakyū, is a major railway company based in Tokyo, Japan, best known for its Romancecar series of limited express trains from Tokyo to Odawara, Enoshima, Tama New Town, and Hakone.",
+        open: 1948
+    },
+    4: {
+        name: "Toei Subway",
+        japaneseName: "都営地下鉄",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/c/cb/PrefSymbol-Tokyo.svg",
+        description: "The Toei Subway (都営地下鉄, Toei chikatetsu) is one of 2 subway systems in Tokyo, the other being Tokyo Metro. The Toei Subway lines were originally licensed to the Teito Rapid Transit Authority (the predecessor of Tokyo Metro) but were constructed by the Tokyo Metropolitan Government following transfers of the licenses for each line. The subway has run at a financial loss for most of its history due to high construction expenses, particularly for the Oedo Line. However, it reported its first net profit of ¥3.13bn in FY2006. The Toei Subway is operated by the Tokyo Metropolitan Bureau of Transportation.",
         open: 1948
     }
 }
@@ -225,15 +268,54 @@ const trains = {
         cars: 10,
         capacity: 358,
         operator: 3
+    },
+    7: {
+        name: "Toei 10-300 series",
+        description: "The Toei 10-300 series (都営10-300形, Toei 10-300-gata) is an electric multiple unit (EMU) train type operated by the Tokyo subway operator Tokyo Metropolitan Bureau of Transportation (Toei) on the Toei Shinjuku Line in Tokyo, Japan, since 2005. The train design is based on the JR train stock E231.",
+        built: "2005 - 2010",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/8/8b/Toei_Type10-300.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/a/ad/Toei_10-300_Inside.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/a/a7/Seat_of_Toei_10-490_wheelchair-space.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/d/da/Toei_10-430_Higashi-fuchu.jpg",
+        ],
+        line: ["7"],
+        cars: 10,
+        capacity: 1300,
+        operator: 4
+    },
+    8: {
+        name: "Toei 5500 series",
+        description: "The Toei 5500 series (都営5500形, Toei 5500-gata) is an electric multiple unit (EMU) train type on order by Tokyo Metropolitan Bureau of Transportation (Toei) for use on Toei Asakusa Line services in Japan from June 2018.",
+        built: "2017 - 2021",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/d/df/Toei-Type5522-1.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/0/0c/Toei-Type5500_Inside.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/d/d5/Toei5501-3.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f6/Toei_5500_cabin.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/e/e5/Toei_5501_Magome_Depot_20170930.jpg",
+        ],
+        line: ["8"],
+        cars: 10,
+        capacity: 1300,
+        operator: 4
     }
 }
 
 const tickets = {
     1: {
-        name: "Japan Rail Pass",
+        name: "JR Rail Pass",
         description: "The Japan Rail Pass (also commonly called JR Pass) is a very cost effective rail pass for long distance train travel in Japan. The pass can be used only by foreign tourists and offers unlimited rides on JR trains for one, two or three weeks at a cost that residents of Japan can only dream of. It comes in two types: ordinary and green car. The latter is valid on green cars (first class cars) that offer more spacious seats than ordinary cars.",
         valid: [7, 14, 21],
         cost: [29650, 47250, 60450],
+        vaildConsecutive: true,
+        operators: [1]
+    },
+    2: {
+        name: "JR Green Rail Pass",
+        description: "The Japan Rail Pass (also commonly called JR Pass) is a very cost effective rail pass for long distance train travel in Japan. The pass can be used only by foreign tourists and offers unlimited rides on JR trains for one, two or three weeks at a cost that residents of Japan can only dream of. It comes in two types: ordinary and green car. The latter is valid on green cars (first class cars) that offer more spacious seats than ordinary cars.",
+        valid: [7, 14, 21],
+        cost: [39600, 64120, 83390],
         vaildConsecutive: true,
         operators: [1]
     }
