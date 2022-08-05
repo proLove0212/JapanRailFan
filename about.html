@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="icon" type="image/x-icon" href="./imgs/favicon.ico">
@@ -13,11 +15,13 @@
     <meta name="theme-color" content="#008d00">
     <title>About - JapanRailFan</title>
 </head>
+
 <body>
     <nav class="navbar navbar-dark navbar-expand-lg sticky-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">JapanRailFan</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -60,17 +64,23 @@
                 </div>
                 <div class="w-100">
                     <div>
-                        <strong><h5>Created By</h5></strong>
+                        <strong>
+                            <h5>Created By</h5>
+                        </strong>
                         <p class="m-0">Joseph Lee</p>
                     </div>
                     <br>
                     <div>
-                        <strong><h5>Images</h5></strong>
+                        <strong>
+                            <h5>Images</h5>
+                        </strong>
                         <p class="m-0">Various Wikipedia users<br>See sources for details</p>
                     </div>
                     <br>
                     <div>
-                        <strong><h5>UI/Libaries</h5></strong>
+                        <strong>
+                            <h5>UI/Libaries</h5>
+                        </strong>
                         <p class="m-0">
                             <a class="white" href="https://getbootstrap.com">Bootstrap v4.6</a><br>
                             <a class="white" href="https://jquery.com">JQuery v3.5.1</a><br>
@@ -78,9 +88,12 @@
                     </div>
                     <br>
                     <div>
-                        <strong><h5>Font/Icon</h5></strong>
+                        <strong>
+                            <h5>Font/Icon</h5>
+                        </strong>
                         <p class="m-0">
-                            <a class="white" href="https://github.com/fontworks-fonts/RocknRoll">RocknRoll (Japanese & English fonts)</a><br>
+                            <a class="white" href="https://github.com/fontworks-fonts/RocknRoll">RocknRoll (Japanese &
+                                English fonts)</a><br>
                             <a class="white" href="https://fonts.google.com/icons">Material Icons</a><br>
                         </p>
                     </div>
@@ -115,6 +128,39 @@
                 </div>
             </div>
         </div>
+        <div class="my-5 d-flex justify-content-center align-content-center">
+            <!--Footer-->
+            <div class="card" data-toggle="modal" data-target="#easterEggModal">
+                <div class="card-body white text-center">
+                    JapanRailFan - 2022<br>
+                    <a href="./trains.html" class="mr-1 white">Trains</a>
+                    <a href="./lines.html" class="mx-1 white">Lines</a>
+                    <a href="./companies.html" class="mx-1 white">Operators</a>
+                    <a href="./tickets.html" class="ml-1 white">Tickets</a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div class="modal fade" id="easterEggModal" tabindex="-1" aria-labelledby="easterEggModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="easterEggModalLabel">Secret Dialog</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/v2VS7DKL1u8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
