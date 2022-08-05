@@ -24,7 +24,7 @@ for (const [ticketKey, value] of Object.entries(tickets)) {
         validText += " of any days"
     }
 
-    ticketsHtml += '<div class="col-md-6 col-lg-4 mb-3"><a href="./ticket.html?ticket=' + ticketKey + '"><div class="card h-shadow"><div class="card-body"><div class="d-flex align-items-center"><h5 id="ticket-name" class="card-title flex-fill m-0">' + ticketName + '</h5><span class="material-symbols-sharp white">chevron_right</span></div><small id="ticket-valid" class="white">' + validText + '</small><p id="ticket-desc" class="m-0 mt-3">' + desc + '</p></div></div></a></div>'
+    ticketsHtml += '<div class="col-md-6 col-lg-4 mb-3"><a href="./ticket.html?ticket=' + ticketKey + '"><div class="card h-100 h-shadow"><div class="card-body"><div class="d-flex align-items-center"><h5 id="ticket-name" class="card-title flex-fill m-0">' + ticketName + '</h5><span class="material-symbols-sharp white">chevron_right</span></div><small id="ticket-valid" class="white">' + validText + '</small><p id="ticket-desc" class="m-0 mt-3">' + desc + '</p></div></div></a></div>'
 }
 
 content.innerHTML = ticketsHtml

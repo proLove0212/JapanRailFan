@@ -170,6 +170,44 @@ const lines = {
         track: 1435,
         length: 40.7
     },
+    10: {
+        name: "Nara Line",
+        japaneseName: "奈良線",
+        shortName: "D",
+        description: "The Nara Line (奈良線, Nara-sen) is a commuter rail line in the Osaka-Kobe-Kyoto metropolitan area, operated by the West Japan Railway Company (JR West). Its official termini are Kizu Station in Kizugawa and Kyōto Station in Kyoto, within Kyoto Prefecture; however, all trains continue past Kizu on the Yamatoji Line (Kansai Main Line) to Nara Station in Nara, Nara Prefecture.",
+        color: "b67c2b",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/d/df/Series221-Nara_line.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/1/1b/Inari_Station_2018.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/7/7c/Platform_of_Inari_station.JPG",
+            "https://upload.wikimedia.org/wikipedia/commons/1/15/JR_West_Nara_Line.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/9/9b/JR_Nara_Station_201409b.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/7/7d/Kyoto_Station_Sign_%28Nara_Line%29_2.jpg",
+        ],
+        operator: 5,
+        open: 1879,
+        speed: 110,
+        track: 1067,
+        length: 34.7
+    },
+    11: {
+        name: "Hanwa Line",
+        japaneseName: "阪和線",
+        shortName: "R",
+        description: "The Hanwa Line (阪和線, Hanwa-sen) is a commuter rail line in the Osaka-Kobe-Kyoto Metropolitan Area, owned and operated by West Japan Railway Company (JR West). The 61.3 km (38.1 mi) line runs between Osaka and Wakayama, Japan and has a 1.7 km branchline in a southern Osaka suburb. The name is taken from the second syllable of Osaka and the first syllable of Wakayama. ",
+        color: "ff6600",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/6/64/%E9%98%AA%E5%92%8C%E7%B7%9A225%E7%B3%BB5100%E7%95%AA%E5%8F%B0.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/a/a5/Bishouen-station.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/c/c9/JRW_nagai.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/c/ce/Tennoji_sta01s3872.jpg",
+        ],
+        operator: 5,
+        open: 1829,
+        speed: 120,
+        track: 1067,
+        length: 63
+    },
 }
 
 const operators = {
@@ -200,6 +238,13 @@ const operators = {
         logo: "https://upload.wikimedia.org/wikipedia/commons/c/cb/PrefSymbol-Tokyo.svg",
         description: "The Toei Subway (都営地下鉄, Toei chikatetsu) is one of 2 subway systems in Tokyo, the other being Tokyo Metro. The Toei Subway lines were originally licensed to the Teito Rapid Transit Authority (the predecessor of Tokyo Metro) but were constructed by the Tokyo Metropolitan Government following transfers of the licenses for each line. The subway has run at a financial loss for most of its history due to high construction expenses, particularly for the Oedo Line. However, it reported its first net profit of ¥3.13bn in FY2006. The Toei Subway is operated by the Tokyo Metropolitan Bureau of Transportation.",
         open: 1948
+    },
+    5: {
+        name: "JR West",
+        japaneseName: "西日本旅客鉄道株式会社",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/b/bd/JR_logo_%28west%29.svg",
+        description: "The West Japan Railway Company, also referred to as JR West (JR西日本, Jeiaru Nishi-Nihon), is one of the Japan Railways Group (JR Group) companies and operates in western Honshu. It has its headquarters in Kita-ku, Osaka. It operates services in the Kansai, Chugoku and Hokuriku regions and includes cities like Osaka and Kyoto.",
+        open: 1987
     }
 }
 
@@ -356,23 +401,129 @@ const trains = {
         capacity: 1628,
         operator: 1
     },
+    10: {
+        name: "205 Series",
+        description: "The 205 series was designed in 1982 as a cheap-to-produce train that could complement the 201 series sets which were considered to be expensive to produce due to the latter's thyristor chopper-controlled traction systems. The first set entered service on the Yamanote Line on 1985, and has remained a staple of the JR fleet network ever since. It was originally built with resistor-controlled traction systems, as they were cheaper to produce than thyristor chopper-controlled motors or something similar to that, but this was somewhat dated technology due to the advent of the variable frequency drive. It uses a traditional design with an unpainted stainless steel body very much like most trains of the period. Each set has a different color scheme to indicate which area the sets serve.",
+        built: "1985 - 1991",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/6/6c/Yamanote_Line_205_series_set_30_Tabata_Station_20030202.JPG",
+            "https://upload.wikimedia.org/wikipedia/commons/a/a2/Jr_t204standing.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/8/84/JRE_EC205_inside.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f0/Inside-JNR205-04.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/1/15/JRE_205-KeiyouLine_Commuter_Special_Rapid.jpg",
+        ],
+        line: ["1", "2"],
+        cars: 10,
+        capacity: 1628,
+        operator: 1
+    },
+    11: {
+        name: "201 Series",
+        description: "The 201 series (201系, 201-kei) is a DC electric multiple unit (EMU) commuter train type introduced in 1979 by Japanese National Railways (JNR). It has been operated by West Japan Railway Company (JR-West) since 1987, and was formerly operated by East Japan Railway Company (JR East) from 1987 until 20 June 2011.",
+        built: "1981 - 1985",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/2/24/JRE_201_series_Chu%C5%8D_line_rapid_2001-05-13.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/d/dc/Series_201_ND602_in_Shin-Imamiya_Station.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/4/4c/JNR201_Shikisai_Nambu_0404294.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/5/5d/201_Shikisai_Takao_20070623.JPG",
+            "https://upload.wikimedia.org/wikipedia/commons/f/f3/JRW-Series201R_Inside.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/0/0f/JRW_Series201R_Inside_Priority-seat.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/7/7b/JR-E_type_201%2C%22Shikisai%22_interior_%283038631388%29.jpg",
+        ],
+        line: ["2"],
+        cars: 10,
+        capacity: 1628,
+        operator: 5
+    },
+    12: {
+        name: "221 Series",
+        description: "The 225 series (225系, 225-kei) is a DC electric multiple unit (EMU) train type operated by West Japan Railway Company (JR-West) on suburban services in the 'Keihanshin' Kyoto-Osaka-Kobe area since December 2010.",
+        built: "2010 - present",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/7/7a/JR_West_225-0_Series_I1_Special_Rapid.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/1/10/JRW_series225-5000_inside.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/5/5b/JRWSeries225-5000-seat2.JPG",
+            "https://upload.wikimedia.org/wikipedia/commons/0/09/JRW_225-display.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/c/c7/JR225-5100-tsunami-hashigo.jpg",
+        ],
+        line: ["10", "11"],
+        cars: 6,
+        capacity: 835,
+        operator: 5
+    },
 }
 
 const tickets = {
     1: {
         name: "JR Rail Pass",
-        description: "The Japan Rail Pass (also commonly called JR Pass) is a very cost effective rail pass for long distance train travel in Japan. The pass can be used only by foreign tourists and offers unlimited rides on JR trains for one, two or three weeks at a cost that residents of Japan can only dream of. It comes in two types: ordinary and green car. The latter is valid on green cars (first class cars) that offer more spacious seats than ordinary cars.",
+        description: "Unlimited travel on almost all JR trains nationwide, including bullet trains, limited express trains, local trains, some JR buses and the JR ferry to Miyajima. ",
         valid: [7, 14, 21],
         cost: [29650, 47250, 60450],
         vaildConsecutive: true,
-        operators: [1]
+        operators: [1,5]
     },
     2: {
         name: "JR Green Rail Pass",
-        description: "The Japan Rail Pass (also commonly called JR Pass) is a very cost effective rail pass for long distance train travel in Japan. The pass can be used only by foreign tourists and offers unlimited rides on JR trains for one, two or three weeks at a cost that residents of Japan can only dream of. It comes in two types: ordinary and green car. The latter is valid on green cars (first class cars) that offer more spacious seats than ordinary cars.",
+        description: "Unlimited travel on almost all JR trains nationwide, including bullet trains, limited express trains, local trains, some JR buses and the JR ferry to Miyajima. This is the green seat ticket that includes a more comfortable seat.",
         valid: [7, 14, 21],
         cost: [39600, 64120, 83390],
         vaildConsecutive: true,
+        operators: [1,5]
+    },
+    3: {
+        name: "JR Seishun 18 Kippu",
+        description: "Unlimited travel on local and rapid (kaisoku) JR trains nationwide.",
+        valid: [5],
+        cost: [12050],
+        vaildConsecutive: false,
+        operators: [1,5]
+    },
+    4: {
+        name: "Hakone Free Pass",
+        description: "Round trip to Hakone by the Odakyu Line and unlimited use of most trains, cablecars, ropeways, boats and buses in the Hakone area. ",
+        valid: [2, 3],
+        cost: [6100, 6500],
+        vaildConsecutive: true,
+        operators: [3]
+    },
+    5: {
+        name: "Fuji Hakone Pass",
+        description: "A one-day trip between Tokyo and Hakone by Odakyu Railway and unlimited use of designated trains, cablecars, ropeways, boats and buses in Hakone and the Fuji Five Lakes region.",
+        valid: [3],
+        cost: [9340],
+        vaildConsecutive: true,
+        operators: [3]
+    },
+    6: {
+        name: "Tokyo Subway Ticket",
+        description: "Tokyo Subway Pass grants unlimited access to 13 different routes with over 250 metro stops covering most of the city",
+        valid: [1, 2, 3],
+        cost: [800, 1200, 1500],
+        vaildConsecutive: true,
+        operators: [2, 4]
+    },
+    7: {
+        name: "JR Tokyo Wide Pass",
+        description: "Unlimited travel on JR trains and selected non-JR lines in the Kanto Region. ",
+        valid: [3],
+        cost: [10180],
+        vaildConsecutive: true,
         operators: [1]
-    }
+    },
+    8: {
+        name: "JR West All Area Pass",
+        description: "Unlimited travel on JR trains in the service area of JR West, which includes the Kansai, Hokuriku and Chugoku regions.",
+        valid: [7],
+        cost: [23000],
+        vaildConsecutive: true,
+        operators: [5]
+    },
+    9: {
+        name: "JR Kansai Area Pass",
+        description: "Unlimited travel on local and rapid (kaisoku) JR trains in the region around Osaka, Kyoto, Nara, Kobe and Himeji and on the Haruka limited express to/from Kansai Airport. ",
+        valid: [1, 2, 3, 4],
+        cost: [2400, 4600, 5600, 6800],
+        vaildConsecutive: true,
+        operators: [5]
+    },
 }
