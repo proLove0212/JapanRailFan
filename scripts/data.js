@@ -208,6 +208,26 @@ const lines = {
         track: 1067,
         length: 63
     },
+    12: {
+        name: "Nankai Main Line",
+        japaneseName: "南海本線",
+        shortName: "N",
+        description: "The Nankai Main Line (南海本線, Nankai Honsen) is one of the two main railway lines of Japanese private railway company Nankai Electric Railway, together with Kōya Line. The route is from Namba Station in south downtown of Osaka to Wakayamashi Station in Wakayama via Sakai, Izumiōtsu, Kishiwada, Kaizuka, Izumisano, Sennan, Hannan and Misaki municipalities. The proper name is with the company's name, 'the Nankai Main Line', not simply 'the Main Line' often seen in other Japanese private railways. Lines of the Nankai Main Lane and the connecting lines excluded the Kōya Line and the Airport Line are named generically 'the Nankai Line (南海線, Nankai Sen)'. The line is shown with a pictogram of waves, or distinguished with blue from conifer or green Kōya Line. ",
+        color: "0065af",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/8/82/Nankai1050Series02.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/a/a2/Nankai_namba_station02s3072.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/0/08/Kansai_Airport_Station02s3.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/6/64/Rinku-town_st01s3200.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/7/70/Shin-Imamiya_Station_Sign_%28Nankai_Main_Line%29.jpg",
+            "https://netmobius.freetls.fastly.net/images-stn-osaka/45-Nankai-Main-Line3.jpg",
+        ],
+        operator: 6,
+        open: 1885,
+        speed: 110,
+        track: 1067,
+        length: 64.2
+    },
 }
 
 const operators = {
@@ -245,6 +265,13 @@ const operators = {
         logo: "https://upload.wikimedia.org/wikipedia/commons/b/bd/JR_logo_%28west%29.svg",
         description: "The West Japan Railway Company, also referred to as JR West (JR西日本, Jeiaru Nishi-Nihon), is one of the Japan Railways Group (JR Group) companies and operates in western Honshu. It has its headquarters in Kita-ku, Osaka. It operates services in the Kansai, Chugoku and Hokuriku regions and includes cities like Osaka and Kyoto.",
         open: 1987
+    },
+    6: {
+        name: "Nankai Electric Railway",
+        japaneseName: "南海電気鉄道株式会社",
+        logo: "https://upload.wikimedia.org/wikipedia/commons/2/2e/Nankai_logo.svg",
+        description: "Nankai Electric Railway Co., Ltd. (南海電気鉄道株式会社, Nankai denki tetsudo kabushiki gaisha) is a private railway in Japan, founded in 1884. The name Nankai (which means 'South Sea') comes from the company's routes along the Nankaidō, the old highway that ran south from the old capital, Kyoto, along the sea coast. Nankai predates all the electric railways in the Tokyo region. ",
+        open: 1925
     }
 }
 
@@ -450,6 +477,22 @@ const trains = {
         cars: 6,
         capacity: 835,
         operator: 5
+    },
+    13: {
+        name: "Nankai 8300 series",
+        description: "The 8300 series trains are used on Nankai Main Line, Nankai Wakayamakō Line, and Nankai Airport Line commuter services singly or coupled with 12000 series EMUs on Southern Premium limited express services to provide non-reserved accommodation.<br>Since 22 November 2019, 8300 series trains have been used on Koya Line services. Nankai expects to deploy additional 8300 series trains and replace the entirety of the 6000 series fleet on the Koya Line by 2023",
+        built: "2015 - present",
+        images: [
+            "https://upload.wikimedia.org/wikipedia/commons/e/e3/Nankai_8300Series_8352F.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/3/31/NK8300_space.jpg",
+            "https://upload.wikimedia.org/wikipedia/commons/1/15/NK8300_room.jpg",
+            "./imgs/n8300-1.jpg",
+            "./imgs/n8300-2.jpg",
+        ],
+        line: ["12"],
+        cars: 4,
+        capacity: 520,
+        operator: 6
     },
 }
 
